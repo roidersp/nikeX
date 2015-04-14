@@ -447,6 +447,7 @@
 	width: 100%;
 	min-height: 110px;
 	background-color: #151515;
+	visibility: hidden;
 	
 }
 
@@ -460,26 +461,83 @@
     width:0px;
     height:0px;
     margin: auto;
+    margin-bottom: 3px;
+    visibility: hidden;
 }
 
 .indepth_loquiero{
 	position: absolute;
-	top: -128px;
+	top: -88px;
 }
 
-.indepth_loquiero_1{
-	
+#indepth_loquiero_1{
+	left: 20px;
 }
 
-.indepth_loquiero_boton{
+#indepth_loquiero_2{
+	right: 20px;
+}
+
+.indepth_loquiero_circulo{
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
 	background-color: #97ca0c;
 	margin-top:53px;
 	margin: auto;
+	animation: lo_quiero 4s infinite;
+	-webkit-animation: lo_quiero 4s infinite; /* Safari 4+ */
+	  -moz-animation:    lo_quiero 4s infinite; /* Fx 5+ */
+	  -o-animation:      lo_quiero 4s infinite; /* Opera 12+ */
+	  
+	 cursor: pointer;
 }
 
+
+.indepth_loquiero_boton{
+	text-transform: uppercase;
+	padding: 5px 10px;
+	color: white;
+	margin: auto;
+	text-align: center;
+	background-color: #97ca0c;
+	display: table;
+	margin-top: 7px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.indepth_loquiero_text{
+	padding: 15px 15px;
+	color: white;
+	text-align: center;
+	
+}
+
+@-webkit-keyframes lo_quiero {
+  0% { width: 14px; height: 14px; }
+  33%   { width: 12px; height: 12px; }
+  66% { width: 16px; height: 16px; }
+  100% { width: 14px; height: 14px; }
+}
+@-moz-keyframes lo_quiero {
+  0% { width: 14px; height: 14px; }
+  33%   { width: 12px; height: 12px; }
+  66% { width: 16px; height: 16px; }
+  100% { width: 14px; height: 14px; }
+}
+@-o-keyframes lo_quiero {
+  0% { width: 14px; height: 14px; }
+  33%   { width: 12px; height: 12px; }
+  66% { width: 16px; height: 16px; }
+  100% { width: 14px; height: 14px; }
+}
+@keyframes lo_quiero {
+ 0% { width: 14px; height: 14px; }
+  33%   { width: 12px; height: 12px; }
+  66% { width: 16px; height: 16px; }
+  100% { width: 14px; height: 14px; }
+}
 
 
 
@@ -522,6 +580,14 @@
 	.indepth_nofix{
 		max-height: 700px;
 	}
+	
+	.indepth_loquiero_container_in{
+	width: 980px;
+	margin: auto;
+	height: 360px;
+	position: relative;
+}
+	
 	
 }
 
@@ -577,7 +643,9 @@
 }
 
 @media screen and (max-width: 800px) {
-	
+	.indepth_page{
+		min-width: 0;
+	}
 	
 	.indepth_pages{
 		width: 100%;

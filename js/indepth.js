@@ -14,7 +14,16 @@ var posicion_slider2=0;
 
 
 
+$(document).on("mouseenter",".indepth_loquiero_circulo",function(){
+	num =$(this).attr("num");
+	$("#indepth_loquiero_"+num+" .indepth_loquiero_cont").css("visibility","visible");
+	$("#indepth_loquiero_"+num+" .indepth_loquiero_down").css("visibility","visible");
+});
 
+$(document).on("mouseleave",".indepth_loquiero",function(){
+	$(" .indepth_loquiero_cont").css("visibility","hidden");
+	$(" .indepth_loquiero_down").css("visibility","hidden");
+});
 
 
 $('#indepth_footer').waypoint(function(direction) {
