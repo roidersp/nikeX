@@ -208,26 +208,7 @@ if (window.DISQUS) {
 $(document).ready(function(){
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
-	slider_estados();
-	 startslider2();
-	 
-	 s = skrollr.init({
-		 mobileCheck: function() {
-                //hack - forces mobile version to be off
-                return false;
-            }
-	 });
-	 
-	 $(" #skrollr-body").css({
-		 "min-height": "1px",
-		"position": "relative",
-"top": 0,
-"left": 0, 
-"width": "100%",
-"height": "auto"
-	 })
-	 
-	 
+
 
 	 var ventana_alto = $(window).height();
 	var ventana_ancho = $(window).width();
@@ -253,7 +234,7 @@ $(document).ready(function(){
     }else{
     	$('#indepth_cover').css("height",(ventana_alto-60)+"px");
     	
-    	 if(ventana_alto>600){
+    	 if(ventana_alto>800){
 	 	$('.indepth_break').css("height",ventana_alto+"px");
 
 
@@ -261,6 +242,11 @@ $(document).ready(function(){
  	}
 	 //ventana_alto=ventana_alto-(ventana_alto*.15)
 	 	//$('.indepth_anuncio_section').css("height",ventana_alto-(ventana_alto*.10)+"px");
+    }
+    
+    
+    if(ventana_ancho<1025 && ventana_alto<769 && ventana_ancho>414){
+	    $('.indepth_break').css("height",(ventana_alto/1.4)+"px");
     }
     
     if(navigator.platform == 'iPad'){
